@@ -1,0 +1,29 @@
+{
+  "name": "request-form",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "rimraf dist && parcel build ./src/index.html --public-url ./",
+    "lint": "npx eslint ./src/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomorroWind/request-from.git"
+  },
+  "author": "Mikhail Pimenov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomorroWind/request-from/issues"
+  },
+  "homepage": "https://github.com/TomorroWind/request-from#readme",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "cssnano": "^5.0.8",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "parcel": "^2.0.0-rc.0",
+    "postcss": "^8.3.6"
+  }
+}

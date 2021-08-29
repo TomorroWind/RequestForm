@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Платформа солидарности. Форма обратной связи" />
+    <link rel="icon" href="images/favico.png" type="image/x-icon" />
+    <meta
+      name="keywords"
+      content="Платформа солидарности, обратная связь, контакты, профсоюз, профсоюз IT, профсоюз Курьер"
+    />
+    <meta name="author" content="Профсоюз IT" />
+    <title>Форма обратной связи</title>
+  </head>
+
+  <body class="page">
+    <header class="page__header">
+      <img alt="Логотип Платформы солидарности" src="./images/logo-full.png" class="header__logo" />
+    </header>
+    <main class="page__content">
+      <form method="post" action="#" class="form">
+        <img alt="Логотип Платформы солидарности" src="./images/logo-short.png" class="form__logo" />
+        <h1 class="form__header">Форма обратной связи</h1>
+        <div class="form-control form__element">
+          <label for="contantType" class="form-control__label"
+            >Тип контакта <span class="form-control__mandatory">*</span></label
+          >
+          <div class="form-control__input">
+            <select name="contactType" id="contact-type" required class="form-control__select-native">
+              <option value="" selected>Выберите тип контакта</option>
+              <option value="1">E-mail</option>
+              <option value="2">ВКонтакте</option>
+              <option value="3">Facebook</option>
+              <option value="4">Telegram</option>
+            </select>
+
+            <span class="form-control__error" id="contact-type-error">В поле есть ошибка</span>
+          </div>
+        </div>
+        <div class="form-control form__element">
+          <label for="contact" class="form-control__label"
+            >Контакт <span class="form-control__mandatory">*</span></label
+          >
+          <div class="form-control__input">
+            <input type="text" id="contact" name="contact" required class="form-control__text" />
+            <span class="form-control__error" id="contact-error">В поле есть ошибка</span>
+          </div>
+        </div>
+        <div class="form-control form__element">
+          <label for="scope" class="form-control__label">Сфера <span class="form-control__mandatory">*</span></label>
+          <div class="form-control__input">
+            <select name="scope" id="scope" required class="form-control__select-native">
+              <option value="" selected>Выберите сферу деятельности</option>
+              <option value="1">IT-специалист</option>
+              <option value="2">Курьер</option>
+              <option value="3">Крановщик</option>
+              <option value="4">Пожарный</option>
+            </select>
+            <span class="form-control__error" id="scope-error">В поле есть ошибка</span>
+          </div>
+        </div>
+        <div class="form-control form__element">
+          <label for="name" class="form-control__label">Имя</label>
+          <div class="form-control__input">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              length="2"
+              placeholder="Иванов Иван Иванович"
+              class="form-control__text"
+            />
+            <span class="form-control__error" id="name-error">Ошибка</span>
+          </div>
+        </div>
+        <div class="form-control form__element">
+          <label for="note" class="form-control__label">Подробнее</label>
+          <div class="form-control__input">
+            <textarea
+              id="note"
+              name="note"
+              rows="5"
+              multiple
+              placeholder="Расскажите о себе или о своей ситуации"
+              class="form-control__text"
+            ></textarea>
+            <span class="form-control__error" id="note-error">Ошибка</span>
+          </div>
+        </div>
+        <div class="form__submit">
+          <p class="form-control__submit-error"></p>
+          <button type="submit" class="form-control__submit" aria-label="Отправить">Отправить</button>
+        </div>
+      </form>
+    </main>
+
+    <template id="custom-drop-down-template">
+      <div class="form-control__select-custom">
+        <p class="form-control__select-custom-current"></p>
+        <ul class="form-control__select-custom-items"></ul>
+      </div>
+    </template>
+
+    <template id="custom-drop-down-item-template">
+      <li class="form-control__select-custom-item" data-index=""></li>
+    </template>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
